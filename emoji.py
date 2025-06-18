@@ -26,7 +26,7 @@ user_input = st.text_area("文章を入力してね：")
 if st.button("絵文字つける！") and user_input:
     result = add_emoji(user_input)
     st.markdown("### ✨ 結果")
-    st.write(result)
+    st.code(result, language="") 
 
  st.markdown(f"""
     <button onclick="navigator.clipboard.writeText(`{result}`)">📋 コピーする</button>
